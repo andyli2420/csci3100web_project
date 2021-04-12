@@ -6,17 +6,30 @@
 	<title>Cuery</title>
 	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
 	<style>
-		body {line-height: 200%; background-color: #8cf;}
-		div {margin: 0 auto;} /* margin: 0 auto is for centering */
+		body {line-height: 200%; background-color: #8cf;margin: 15px 60px;
+        }
+		div {height: 100%;margin: 0 auto;} /* margin: 0 auto is for centering */
 		p {display: block; margin: 0;}
 		span {display: inline;}
-		
+		.avatar {position: absolute; top: 0.5em; right: 0.5em; height: 2.5rem; width: 2.5rem; cursor: pointer; z-index: 1000;}
+		.sidebar { background-color: #fff; position: absolute; top: 0px; right: 0px; min-height: 100vh; white-space: nowrap; z-index: 999; transition: width 1s; width: 0px;}
+		.sidebar-visible {width: 200px;}
 		button {border: 1px solid blue; border-radius: 0.5em; background-color: #def; transition: background 0.2s;}
 		button:hover {background-color: #8cf;}
 		button:active {background-color: #88f;}
 	</style>
 </head>
 <body>
+	<div style="line-height: 100%; padding: 0.5em;">
+		<h1 class="d-inline-block mx-2">Cuery</h1>
+		<img src="whatever-because-we-don't-have-a-logo.jpg" alt="Cuery Logo"/>
+		<img src="avatar.jpg" class="avatar" onclick="document.getElementById('sidebar').classList.toggle('sidebar-visible');"/>
+	</div>
+	<div id="sidebar" class="sidebar">
+		<li><a href = "#">My Account</a></li>
+		<li><a href = "#">Main Page</a></li>
+		<li><a href = "#">Logout</a></li>
+	</div>
 	<div style="max-width: 800px;">
 		<div style="background-color: #eee; width: 90%;">
 			<div style="padding: 5%;">
